@@ -18,3 +18,42 @@
 .menu-item.bg-white\/20::before {
   height: 24px;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.sidebar-link,
+.sidebar-menu-button {
+  color: #cbd5e1;
+}
+
+.sidebar-link.active,
+.sidebar-menu-button.active {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.24);
+}
+
+.sidebar-sublink.active {
+  color: #38bdf8 !important;
+  background-color: rgba(56, 189, 248, 0.1) !important;
+  font-weight: 800;
+}
+
+.sidebar-minimized .submenu {
+  display: none !important;
+}
