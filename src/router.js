@@ -82,3 +82,36 @@ const pageMeta = {
     subtitle: "Pengaturan profil dan preferensi aplikasi."
   }
 };
+
+export function renderRoute(page) {
+  const title = document.getElementById("page-title");
+  const subtitle = document.getElementById("page-subtitle");
+  const content = document.getElementById("page-content");
+
+  const meta = pageMeta[page] || pageMeta.dashboard;
+
+  if (title) title.textContent = meta.title;
+  if (subtitle) subtitle.textContent = meta.subtitle;
+  if (!content) return;
+
+  if (page === "dashboard") {
+    renderDashboardPage(content);
+    return;
+  }
+
+  content.innerHTML = `
+    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm dark:border-slate-700 dark:bg-slate-800">
+      <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-indigo-600 dark:bg-indigo-900/30 dark:text-indigo-400">
+        <i data-lucide="construction" class="h-6 w-6"></i>
+      </div>
+
+      <h2 class="text-lg font-extrabold text-slate-900 dark:text-white">
+        ${meta.title}
+      </h2>
+
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
+        Page ini sudah masuk routing. Nanti kita isi layout dan logic-nya setelah dashboard utama selesai.
+      </p>
+    </div>
+  `;
+}
