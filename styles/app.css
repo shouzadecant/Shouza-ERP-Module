@@ -1,1 +1,20 @@
+.menu-item {
+  position: relative;
+}
 
+.menu-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  width: 3px;
+  height: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-50%);
+  transition: height 0.18s ease;
+}
+
+.menu-item.bg-white\/20::before {
+  height: 24px;
+}
