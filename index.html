@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDP Operational Dashboard</title>
 
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/shouzadecant/image-database/main/faviconsdp.png?v=3">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            sdp: {
+              50: "#f3f8f5",
+              100: "#e2ebe5",
+              500: "#5f7f6e",
+              700: "#2f4f3e",
+              900: "#1f3a2c"
+            }
+          }
+        }
+      }
+    };
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="./styles/app.css" />
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+  <div id="root"></div>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
